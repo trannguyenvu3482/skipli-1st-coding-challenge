@@ -1,0 +1,7 @@
+## Create an OTP code
+POST http://localhost:3000/api/create-code
+Content-Type: application/json
+
+{
+    phoneNumber: "0903252508"
+}
