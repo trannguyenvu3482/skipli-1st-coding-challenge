@@ -9,7 +9,7 @@
 ### Client (Server default port is 3000):
 - Go into the client folder:
 ```cmd
-cd client\
+cd .\client\
 ```
 
 - Install all the dependencies:
@@ -25,7 +25,7 @@ npm start
 ### Server (Server default port is 3001):
 - Go into the server folder:
 ```cmd
-cd client\
+cd .\server\
 ```
 
 - Install all the dependencies:
