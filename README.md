@@ -6,7 +6,7 @@
 ### Server:
 - Technologies: Express, Firebase Firestore
 ## How to run:
-### Client:
+### Client (Server default port is 3000):
 - Go into the client folder:
 ```cmd
 cd client\
@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-### Server:
+### Server (Server default port is 3001):
 - Go into the server folder:
 ```cmd
 cd client\
