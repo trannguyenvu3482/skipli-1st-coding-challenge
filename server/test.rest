@@ -1,7 +1,19 @@
-## Create an OTP code
-POST http://localhost:3000/api/create-code
+## API Documentation
+## Create a random 6-digit code and send it to the phone number
+POST http://localhost:3001/api/create-code
 Content-Type: application/json
 
 {
-    phoneNumber: "0903252508"
+    "phoneNumber": "+84903252508"
+}
+
+###
+
+## Verify the code
+POST http://localhost:3001/api/validate-code
+Content-Type: application/json
+
+{
+    "phoneNumber": "+84903252508",
+    "accessCode": "772025"
 }
