@@ -9,16 +9,17 @@ const Login = () => {
   const [phone, setPhone] = useState('');
   const [code, setCode] = useState('');
 
+  // Handle send code button click
   const handleSendCode = async (e) => {
     try {
+      // Check if the phone number is not empty
       if (phone === '') {
         toast.error('Please enter a phone number');
       } else {
+        // Send a POST request to the server to send a code to the phone number
         const res = await axios.post('http://localhost:3001/api/create-code', {
           phoneNumber: phone,
         });
-
-        console.log(res.data);
 
         if (res.status === 200) {
           toast.success('A code has been sent to your phone!');
@@ -31,12 +32,16 @@ const Login = () => {
     }
   };
 
+  // Handle form submit
   const handleFormSubmit = async (e) => {
     try {
       e.preventDefault();
+
+      // Check if the phone number and code are not empty
       if (phone === '' || code === '') {
         toast.error('Please enter all the required fields');
       } else {
+        // Send a POST request to the server to validate the code
         const res = await axios.post(
           'http://localhost:3001/api/validate-code',
           {
@@ -44,8 +49,6 @@ const Login = () => {
             accessCode: code,
           }
         );
-
-        console.log(res.data);
 
         if (res.status === 200) {
           toast.success('You have successfully logged in!');
@@ -67,7 +70,7 @@ const Login = () => {
           alignItems: 'center',
         }}
       >
-        <h1>Register</h1>
+        <h1>Phone verification</h1>
 
         <Box
           component="form"

@@ -21,7 +21,7 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Signup Page
+            SKIPLY Coding Challenge #1
           </Typography>
         </Toolbar>
       </AppBar>
