@@ -2,11 +2,21 @@
 
 ## About the project:
 ### Client:
-- Technologies: ReactJS, Material UI and React Toastify for UI, Axios for fetching
+- Technologies: ReactJS, Material UI for UI design,React Toastify for notifications
+- API calls is achieved through Axios
+- The main page of this application is ```Login.jsx```, can be found within the ```pages``` folder
+- There's only one component, the ```Header.jsx```, which can be located in the ```components``` folder
+
 ### Server:
 - Technologies: NodeJS, Express, Firebase Firestore as main database
-- Notes:
-  + A Twilio private key is needed and a Firebase Service Account is needed so it may not work when running this project, I have left an example.env file as example for some env variables being used in my project
+- Project structure:
+  + The central logic handling is performed by ```phoneController.js```, situated in the ```controller``` directory.
+  + The primary routing is defined in ```phoneRouter.js```, found in the ```routes``` directory.
+  + The backend setup is established through the ```server.js``` and ```app.js``` files.
+  + The Twilio configurations are located in ```twilio.js```, and Firebase configurations are located in ```firebase.js```.
+  + Code quality is maintained through the use of ESLint, with forced AirBNB code style
+- Please note that a Twilio private key and a Firebase Service Account are required to run this project. If you encounter any issues, an example.env file has been provided as a reference for the environment variables used in the project.
+
 ## How to run:
 ### Client (Server default port is 3000):
 - Go into the client folder:
